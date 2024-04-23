@@ -1,0 +1,37 @@
+<!-- <p>login Form Control</p>
+
+<label>Login:</label>
+<input type="text" placeholder="login" [formControl]="login">
+<label>Pwd:</label>
+<input type="text" placeholder="pwd" [formControl]="pwd">
+<button (click)="signIn()"  [disabled]="login.invalid|| pwd.invalid"> sign in</button> -->
+
+<p>Form Group</p>
+
+<form [formGroup]="loginForm" (submit)="signIn()">
+  <label>Login:</label>
+  <input type="text" placeholder="login" formControlName="login" />
+  <div
+    *ngIf="loginForm.get('login')?.invalid || loginForm.get('login')?.touched"
+  >
+    <div *ngIf="loginForm.get('login')?.hasError('required')">
+      Login is required
+    </div>
+    <div *ngIf="loginForm.get('login')?.hasError('minlength')">minlength is 3 characters</div>
+    <div *ngIf="loginForm.get('login')?.hasError('maxlength')">maxlength is 15 characters</div>
+
+  </div>
+  <label>Pwd:</label>
+  <input type="text" placeholder="pwd" formControlName="pwd" />
+  <div
+    *ngIf="loginForm.get('pwd')?.invalid || loginForm.get('pwd')?.touched"
+  >
+    <div *ngIf="loginForm.get('pwd')?.hasError('required')">
+      pwd is required
+    </div>
+    <div *ngIf="loginForm.get('pwd')?.hasError('pattern')">pwd must have at lease upperCase lettres between A and E</div>
+    <div *ngIf="loginForm.get('pwd')?.hasError('maxlength')">maxlength is 8 characters</div>
+
+  </div>
+  <input  type="submit" [disabled]="loginForm.invalid">
+</form>
