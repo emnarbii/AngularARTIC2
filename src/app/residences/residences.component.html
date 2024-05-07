@@ -1,5 +1,4 @@
 <p>residences works!</p>
-
 <table [border]="1">
   <tr>
     <th>id</th>
@@ -15,14 +14,14 @@
     <td>{{r.address}}</td>
     <td>{{r.image}}</td>
     <td>
-      <a [routerLink]="['apartements',r.id]">details</a>
+      <a [routerLink]="['/apartment',r.id]">details</a>
     </td>
 
   </tr>
 
 
 </table>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 <!-- 
 <h3>Apartments</h3>
 <input type="text" placeholder="taper votre surface " [(ngModel)]="surface" >

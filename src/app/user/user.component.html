@@ -1,0 +1,25 @@
+<h3>User List</h3>
+
+
+<table [border]="1"  >
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    <th>email</th>
+  </tr>
+  <ng-container *ngFor="let user of userList " >
+    <tr    >
+     <td>{{user.id}}</td>
+     <td>{{user.name}}</td>
+     <td>{{user.userName}}</td>
+     <td>{{user.email}}</td>
+
+    
+  </tr>
+  </ng-container>
+</table>
+
+
+
+
