@@ -1,26 +1,26 @@
 <h3>Apartments</h3>
+<a routerLink="/addApartment" class="btn btn-primary">Add </a>
 
-<p>stat appartement: {{stat}}</p>
-
-<table [border]="1" *ngIf="listApp.length !=0 ; else notfoud ;"  >
+<table border="1" *ngIf="listApp.length != 0; else notfoud">
   <tr>
     <th>id</th>
     <th>appartNum</th>
+    <th>floorNum</th>
     <th>surface</th>
-    <th>action</th>
-  </tr>
-  <ng-container *ngFor="let apr of listApp " >
-    <tr    >
-     <td>{{apr.id}}</td>
-     <td>{{apr.appartNum}}</td>
-     <td>{{apr.surface}}</td>
+    <th>Actions</th>
     
   </tr>
+  <ng-container *ngFor="let apr of listApp">
+    <tr>
+      <td>{{ apr.id }}</td>
+      <td>{{ apr.appartNum }}</td>
+      <td>{{ apr.floorNum }}</td>
+      <td>{{ apr.surface }}</td>
+      <td><button (click)="deleteAppart(apr.id)">delete</button></td>
+    </tr>
   </ng-container>
 </table>
 
 <ng-template #notfoud>
-<h3>no apartament is available</h3>
+  <h3>no apartament is available</h3>
 </ng-template>
-
-

@@ -1,16 +1,32 @@
 {
-
-    "user":[
-        {"id":1,
-        "name":"Ali",
-        "userName":"ALI123",
-        "email":"ali@gmail.com"
-
-        },
-        {"id":2,
-        "name":"nour",
-        "userName":"nour123",
-        "email":"nour@gmail.com"
-
-        }]
+  "user": [
+    {
+      "id": "1",
+      "name": "Ali",
+      "userName": "ALI123",
+      "email": "ali@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "nour",
+      "userName": "nour123",
+      "email": "nour@gmail.com"
+    }
+  ],
+  "appartement": [
+    {
+      "id": "9cc5",
+      "appartNum": "12",
+      "floorNum": 44,
+      "surface": "55",
+      "terrace": "yes",
+      "description": "zeeeee",
+      "residence": {
+        "id": 1,
+        "name": "El fel",
+        "address": "Borj Cedria",
+        "image": "../../assets/images/residence1.jpg"
+      }
+    }
+  ]
 }

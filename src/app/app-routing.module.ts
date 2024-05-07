@@ -7,6 +7,7 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { LoginComponent } from './login/login.component';
 import { ApartementsComponent } from './apartements/apartements.component';
 import { UserComponent } from './user/user.component';
+import { AddapartmentComponent } from './addapartment/addapartment.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,9 @@ const routes: Routes = [
   {path:"signin", component:LoginComponent},
   {path:"users", component:UserComponent},
 
-  {path:"apartment/:r", component:ApartementsComponent},
+  {path:"apartment", component:ApartementsComponent},
+  {path:"addApartment", component:AddapartmentComponent},
+
   {path:"", redirectTo:"home",pathMatch:"full"},
   {path:"**", component:NotFoundComponent}
 ];

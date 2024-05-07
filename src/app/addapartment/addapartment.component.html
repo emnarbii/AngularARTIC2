@@ -1,0 +1,20 @@
+<p>formulaire Appartement !</p>
+<div class="container">
+  <form [formGroup]="myForm">
+    <div >
+      <div >
+        <span >AppartNum:</span>
+      </div>
+      <input type="text" formControlName="appartNum" />
+    </div>
+    <div >
+      <div >
+        <span >Description:</span>
+      </div>
+      <input type="text"  formControlName="description" />
+    </div>
+   
+    <br />
+    <input type="submit"  (click)="addApartement()" />
+  </form>
+</div>

@@ -14,6 +14,7 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
+import { AddapartmentComponent } from './addapartment/addapartment.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { UserComponent } from './user/user.component';
     NotFoundComponent,
     ApartementsComponent,
     FormResidenceComponent,     
-       LoginComponent, UserComponent  ],
+       LoginComponent, UserComponent, AddapartmentComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
